@@ -1,6 +1,8 @@
 @import 'vars';
 @import 'global';
 
+// start header
+
 .header{
   min-height: 868px;
   background-size: 100% 100%;
@@ -75,3 +77,48 @@
     }
   }
 }
+
+// end header
+
+// start advertising
+
+.advertising{
+  &__inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110px;
+    position: relative;
+    margin: 16px 0px;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 0;
+      border-image: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.38%, rgba(192, 204, 218, 0.1) 100%);
+      border-image-slice: 1;
+      z-index: 2;
+      border-width: 1px;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      border-image: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.38%, rgba(192, 204, 218, 0.1) 100%);
+      border-image-slice: 1;
+      z-index: 2;
+      border-width: 1px;
+    }
+  }
+  &__item{
+    & + .advertising__item{
+      margin-left: 64px;
+    }
+  }
+}
+
+
+// end advertising
