@@ -33,3 +33,14 @@ li{
   margin: 0 auto;
   padding: 0px 15px;
 }
+
+.title{
+  @include f800;
+  font-size: 48px;
+  line-height: 64px;
+}
+
+.text{
+  font-size: 18px;
+  line-height: 32px;
+}
